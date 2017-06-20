@@ -11,7 +11,6 @@ var checkIfOperating = false;
 router.get('/', function(req, res, next) {
     if (!checkIfOperating) {
         checkIfOperating = true
-        res.send({status: "OK"});
         var path = config.testPath;
         console.log(path)
         var name;
@@ -21,7 +20,12 @@ router.get('/', function(req, res, next) {
             name = req.body.name
         }else if(req.query.hasOwnProperty("name")){
             name = req.query.name
+        }else{
+            res.send({status: "Error", error: "Please attach product name with HTTP request"});
+            checkIfOperating = false;
+            return;
         }
+        res.send({status: "OK"});
         console.log(name)
         exec("cd "+path+" && npm start "+name,function(error,stdout,stderr){
             if(error){
@@ -45,8 +49,7 @@ router.get('/', function(req, res, next) {
                 //res.send(data);
             });
         });
-    }
-    else {
+    }else {
         res.send({status: "Server is busy, try again in few minute"})
     }
 
