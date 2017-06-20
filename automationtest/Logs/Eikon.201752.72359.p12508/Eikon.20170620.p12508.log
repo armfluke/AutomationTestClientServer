@@ -1,0 +1,38 @@
+2017-06-20T07:23:59.665Z - info: Read package.json
+2017-06-20T07:23:59.671Z - info: _: 
+2017-06-20T07:23:59.671Z - info: silent: false
+2017-06-20T07:23:59.671Z - info: update: false
+2017-06-20T07:23:59.671Z - info: rollback: false
+2017-06-20T07:23:59.671Z - info: uninstall: false
+2017-06-20T07:23:59.672Z - info: noshortcut: false
+2017-06-20T07:23:59.672Z - info: forceInstall: false
+2017-06-20T07:23:59.672Z - info: calledByCheckupdate: false
+2017-06-20T07:23:59.672Z - info: rerun: false
+2017-06-20T07:24:00.470Z - info: Read InstallInfo.json
+2017-06-20T07:24:00.471Z - info: Read installDir from InstallInfo.json
+2017-06-20T07:24:00.473Z - info: programPath: C:\Users\U6062678\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-20T07:24:00.473Z - info: programName: EikonLight.exe
+2017-06-20T07:24:06.753Z - info:  command=EikonLight.exe, pid=2164, command=EikonLight.exe, pid=11140, command=EikonLight.exe, pid=8784
+2017-06-20T07:24:07.281Z - info: CleanProcess(): 2164
+2017-06-20T07:24:07.415Z - info: Kill All Complete
+2017-06-20T07:24:07.416Z - info: Remove Shortcut
+2017-06-20T07:24:07.421Z - info: Remove ARP
+2017-06-20T07:24:07.423Z - info: Installer: Removing registry
+2017-06-20T07:24:07.549Z - info: ARPManager: Removing keys complete.
+2017-06-20T07:24:07.551Z - info: Remove Files
+2017-06-20T07:24:07.551Z - info: isUpdate: true
+2017-06-20T07:24:07.629Z - info: [CheckPrerequisite] Start:
+2017-06-20T07:24:07.632Z - info: root = C:
+2017-06-20T07:24:07.960Z - info: free: 152847368192
+2017-06-20T07:24:07.961Z - info: requriedSpace: 1073741824
+2017-06-20T07:24:07.961Z - info: [CheckPrerequisite] End:
+2017-06-20T07:24:07.962Z - info: [CopyFile] Start:
+2017-06-20T07:24:08.358Z - info: [CopyFile] End:
+2017-06-20T07:24:08.358Z - info: [InstallWindowsShortcut] Start:
+2017-06-20T07:24:08.677Z - info: [InstallWindowsShortcut] End:
+2017-06-20T07:24:08.678Z - info: [InstallWindowsARP] Start:
+2017-06-20T07:24:08.715Z - info: Package size is : 171739 MB
+2017-06-20T07:24:08.727Z - info: Installer: Installing registry
+2017-06-20T07:24:09.588Z - info: ARPManager: Register keys complete.
+2017-06-20T07:24:09.588Z - info: [InstallWindowsARP] End:
+2017-06-20T07:24:10.099Z - info: Launch...
