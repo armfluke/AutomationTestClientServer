@@ -12,7 +12,6 @@ var checkIfOperating = false;
 router.get('/', function(req, res, next) {
     if (status.isAvailiable()) {
         status.set('Service Unavailable')
-        res.send({status: "OK"});
         var path = config.testPath;
         console.log(path)
         var name;

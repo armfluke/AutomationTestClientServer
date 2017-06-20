@@ -128,6 +128,10 @@ var installationTest = function(json){
                     console.log("!!! Automation Testing pass !!!");
                     var content = {
                         name : json.name,
+                        hostName: os.hostname(),
+                        osType: os.type(),
+                        platform: os.platform(),
+                        osArch: os.arch(),
                         time: new Date(),
                         status : "Pass"
                     }
@@ -136,6 +140,10 @@ var installationTest = function(json){
                     var content = {
                         name : json.name,
                         time: new Date(),
+                        hostName: os.hostname(),
+                        osType: os.type(),
+                        platform: os.platform(),
+                        osArch: os.arch(),
                         status : "Fail",
                         error : "Can't click uninstall button"
                     }
@@ -151,6 +159,10 @@ var installationTest = function(json){
         var content = {
             name : json.name,
             time: new Date(),
+            hostName: os.hostname(),
+            osType: os.type(),
+            platform: os.platform(),
+            osArch: os.arch(),
             status : "Fail",
             error : error
         }
