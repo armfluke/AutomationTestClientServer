@@ -9,22 +9,21 @@ const request = require("request");
 router.get('/', function(req, res, next) {
     res.send({status: "OK"});
     var path = "../automationtest";
-    console.log(path);
-    exec("cd "+path+" && npm start "+req.query.name,function(error,stdout,stderr){
+    exec("cd "+path+" && npm start "+req.body.name,function(error,stdout,stderr){
         fs.readFile('../automationtest/result.json', 'utf8', function (err,data) {
             if (err) {
                 return console.log(err);
             }
-            /*request.post('http://10.42.87.159:3000/submitres',
+            request.post('http://10.42.87.159:3000/submitres',
                 {json: {result: data}},
                 function(error,response,body){
                     if(error){
                         console.log(error);
                     }else{
-                        console.log(response);
+                        console.log(response.body);
                     }
                 }
-            );*/
+            );
             //res.send(data);
         });
     });
