@@ -1,0 +1,51 @@
+2017-06-19T04:27:52.176Z - info: Read package.json
+2017-06-19T04:27:52.180Z - info: _: 
+2017-06-19T04:27:52.181Z - info: silent: false
+2017-06-19T04:27:52.181Z - info: update: false
+2017-06-19T04:27:52.181Z - info: rollback: false
+2017-06-19T04:27:52.181Z - info: uninstall: false
+2017-06-19T04:27:52.181Z - info: noshortcut: false
+2017-06-19T04:27:52.181Z - info: forceInstall: false
+2017-06-19T04:27:52.181Z - info: calledByCheckupdate: false
+2017-06-19T04:27:52.181Z - info: rerun: false
+2017-06-19T04:27:52.787Z - info: Read InstallInfo.json
+2017-06-19T04:27:52.787Z - info: Read installDir from InstallInfo.json
+2017-06-19T04:27:52.789Z - info: programPath: C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-19T04:27:52.789Z - info: programName: EikonLight.exe
+2017-06-19T04:27:54.141Z - info:  command=EikonLight.exe, pid=13236, command=EikonLight.exe, pid=9948, command=EikonLight.exe, pid=10100, command=EikonLight.exe, pid=10572, command=EikonLight.exe, pid=13868, command=EikonLight.exe, pid=11928, command=EikonLight.exe, pid=8992, command=EikonLight.exe, pid=11204, command=EikonLight.exe, pid=14512
+2017-06-19T04:27:54.569Z - info: CleanProcess(): 9948
+2017-06-19T04:27:54.585Z - info: CleanProcess(): 13868
+2017-06-19T04:27:54.600Z - info: CleanProcess(): 11204
+2017-06-19T04:27:54.608Z - info: CleanProcess(): 11928
+2017-06-19T04:27:54.620Z - info: CleanProcess(): 14512
+2017-06-19T04:27:54.649Z - info: CleanProcess(): 10100
+2017-06-19T04:27:54.652Z - info: CleanProcess(): 10572
+2017-06-19T04:27:54.652Z - info: CleanProcess(): 8992
+2017-06-19T04:27:54.664Z - info: Kill All Complete
+2017-06-19T04:27:54.665Z - info: Remove Shortcut
+2017-06-19T04:27:54.670Z - info: Remove ARP
+2017-06-19T04:27:54.670Z - info: Installer: Removing registry
+2017-06-19T04:27:54.697Z - info: ARPManager: Removing keys complete.
+2017-06-19T04:27:54.698Z - info: Remove Files
+2017-06-19T04:27:54.698Z - info: isUpdate: true
+2017-06-19T04:27:54.702Z - error: cannot remove C:\Users\U6062679\AppData\Roaming\Thomson Reuters\Eikon Light\Cache
+2017-06-19T04:27:54.702Z - error: cannot remove C:\Users\U6062679\AppData\Local\Eikon Light
+2017-06-19T04:27:54.706Z - error: cannot remove C:\Users\U6062679\AppData\Roaming\Thomson Reuters\Eikon Light
+2017-06-19T04:27:54.708Z - info: [CheckPrerequisite] Start:
+2017-06-19T04:27:54.709Z - info: root = C:
+2017-06-19T04:27:54.866Z - info: free: 142856073216
+2017-06-19T04:27:54.866Z - info: requriedSpace: 1073741824
+2017-06-19T04:27:54.866Z - info: Skipped: H:
+2017-06-19T04:27:54.866Z - info: [CheckPrerequisite] End:
+2017-06-19T04:27:54.867Z - info: [CopyFile] Start:
+2017-06-19T04:27:55.148Z - info: [CopyFile] End:
+2017-06-19T04:27:55.148Z - info: [InstallWindowsShortcut] Start:
+2017-06-19T04:27:56.339Z - info: [InstallWindowsShortcut] End:
+2017-06-19T04:27:56.339Z - info: [InstallWindowsARP] Start:
+2017-06-19T04:27:56.439Z - info: Package size is : 171739 MB
+2017-06-19T04:27:56.448Z - info: Installer: Installing registry
+2017-06-19T04:27:56.590Z - info: ARPManager: Register keys complete.
+2017-06-19T04:27:56.591Z - info: [InstallWindowsARP] End:
+2017-06-19T04:27:57.095Z - info: Launch...
+2017-06-19T04:27:57.095Z - info: programPath: C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-19T04:27:57.095Z - info: installPath: C:\Users\U6062679\AppData\Local\Eikon Light

@@ -1,0 +1,40 @@
+2017-06-19T06:12:29.509Z - info: Read package.json
+2017-06-19T06:12:29.514Z - info: _: 
+2017-06-19T06:12:29.514Z - info: silent: false
+2017-06-19T06:12:29.514Z - info: update: false
+2017-06-19T06:12:29.515Z - info: rollback: false
+2017-06-19T06:12:29.515Z - info: uninstall: false
+2017-06-19T06:12:29.515Z - info: noshortcut: false
+2017-06-19T06:12:29.515Z - info: forceInstall: false
+2017-06-19T06:12:29.515Z - info: calledByCheckupdate: false
+2017-06-19T06:12:29.515Z - info: rerun: false
+2017-06-19T06:12:30.174Z - info: Read InstallInfo.json
+2017-06-19T06:12:30.175Z - info: Read installDir from InstallInfo.json
+2017-06-19T06:12:30.176Z - info: programPath: C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-19T06:12:30.176Z - info: programName: EikonLight.exe
+2017-06-19T06:12:31.693Z - info: 
+2017-06-19T06:12:31.694Z - info: Kill All Complete
+2017-06-19T06:12:31.695Z - info: Remove Shortcut
+2017-06-19T06:12:31.699Z - info: Remove ARP
+2017-06-19T06:12:31.699Z - info: Installer: Removing registry
+2017-06-19T06:12:31.725Z - info: ARPManager: Removing keys complete.
+2017-06-19T06:12:31.725Z - info: Remove Files
+2017-06-19T06:12:31.725Z - info: isUpdate: true
+2017-06-19T06:12:31.782Z - info: [CheckPrerequisite] Start:
+2017-06-19T06:12:31.783Z - info: root = C:
+2017-06-19T06:12:31.984Z - info: free: 140116021248
+2017-06-19T06:12:31.984Z - info: requriedSpace: 1073741824
+2017-06-19T06:12:31.984Z - info: Skipped: H:
+2017-06-19T06:12:31.984Z - info: [CheckPrerequisite] End:
+2017-06-19T06:12:31.985Z - info: [CopyFile] Start:
+2017-06-19T06:12:32.255Z - info: [CopyFile] End:
+2017-06-19T06:12:32.255Z - info: [InstallWindowsShortcut] Start:
+2017-06-19T06:12:33.613Z - info: [InstallWindowsShortcut] End:
+2017-06-19T06:12:33.613Z - info: [InstallWindowsARP] Start:
+2017-06-19T06:12:33.619Z - info: Package size is : 171739 MB
+2017-06-19T06:12:33.627Z - info: Installer: Installing registry
+2017-06-19T06:12:33.775Z - info: ARPManager: Register keys complete.
+2017-06-19T06:12:33.775Z - info: [InstallWindowsARP] End:
+2017-06-19T06:12:34.279Z - info: Launch...
+2017-06-19T06:12:34.279Z - info: programPath: C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-19T06:12:34.279Z - info: installPath: C:\Users\U6062679\AppData\Local\Eikon Light

@@ -1,0 +1,43 @@
+2017-06-19T04:15:33.356Z - info: Read package.json
+2017-06-19T04:15:33.360Z - info: _: 
+2017-06-19T04:15:33.360Z - info: silent: false
+2017-06-19T04:15:33.360Z - info: update: false
+2017-06-19T04:15:33.360Z - info: rollback: false
+2017-06-19T04:15:33.360Z - info: uninstall: false
+2017-06-19T04:15:33.360Z - info: noshortcut: false
+2017-06-19T04:15:33.360Z - info: forceInstall: false
+2017-06-19T04:15:33.360Z - info: calledByCheckupdate: false
+2017-06-19T04:15:33.360Z - info: rerun: false
+2017-06-19T04:15:33.969Z - info: Read InstallInfo.json
+2017-06-19T04:15:33.969Z - info: Read installDir from InstallInfo.json
+2017-06-19T04:15:33.970Z - info: programPath: C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-19T04:15:33.971Z - info: programName: EikonLight.exe
+2017-06-19T04:15:35.515Z - info:  command=EikonLight.exe, pid=10536, command=EikonLight.exe, pid=8456, command=EikonLight.exe, pid=11572, command=EikonLight.exe, pid=11332, command=EikonLight.exe, pid=12788, command=EikonLight.exe, pid=7588, command=EikonLight.exe, pid=8752, command=EikonLight.exe, pid=13784
+2017-06-19T04:15:35.981Z - info: CleanProcess(): 7588
+2017-06-19T04:15:35.995Z - info: CleanProcess(): 13784
+2017-06-19T04:15:36.034Z - info: CleanProcess(): 12788
+2017-06-19T04:15:36.057Z - info: CleanProcess(): 8752
+2017-06-19T04:15:36.057Z - info: CleanProcess(): 11572
+2017-06-19T04:15:36.140Z - info: Kill All Complete
+2017-06-19T04:15:36.141Z - info: Remove Shortcut
+2017-06-19T04:15:36.146Z - info: Remove ARP
+2017-06-19T04:15:36.147Z - info: Installer: Removing registry
+2017-06-19T04:15:36.173Z - info: ARPManager: Removing keys complete.
+2017-06-19T04:15:36.174Z - info: Remove Files
+2017-06-19T04:15:36.174Z - info: isUpdate: true
+2017-06-19T04:15:36.233Z - info: [CheckPrerequisite] Start:
+2017-06-19T04:15:36.234Z - info: root = C:
+2017-06-19T04:15:36.421Z - info: free: 146799165440
+2017-06-19T04:15:36.421Z - info: requriedSpace: 1073741824
+2017-06-19T04:15:36.421Z - info: Skipped: H:
+2017-06-19T04:15:36.421Z - info: [CheckPrerequisite] End:
+2017-06-19T04:15:36.422Z - info: [CopyFile] Start:
+2017-06-19T04:15:36.671Z - info: [CopyFile] End:
+2017-06-19T04:15:36.671Z - info: [InstallWindowsShortcut] Start:
+2017-06-19T04:15:39.115Z - info: [InstallWindowsShortcut] End:
+2017-06-19T04:15:39.115Z - info: [InstallWindowsARP] Start:
+2017-06-19T04:15:39.121Z - info: Package size is : 171739 MB
+2017-06-19T04:15:39.129Z - info: Installer: Installing registry
+2017-06-19T04:15:39.268Z - info: ARPManager: Register keys complete.
+2017-06-19T04:15:39.269Z - info: [InstallWindowsARP] End:
+2017-06-19T04:15:39.772Z - info: Launch...

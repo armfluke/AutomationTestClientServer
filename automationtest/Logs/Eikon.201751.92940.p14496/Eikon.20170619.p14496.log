@@ -1,0 +1,28 @@
+2017-06-19T09:29:40.893Z - info: Read package.json
+2017-06-19T09:29:40.896Z - info: _: 
+2017-06-19T09:29:40.896Z - info: silent: false
+2017-06-19T09:29:40.896Z - info: update: false
+2017-06-19T09:29:40.896Z - info: rollback: false
+2017-06-19T09:29:40.896Z - info: uninstall: false
+2017-06-19T09:29:40.896Z - info: noshortcut: false
+2017-06-19T09:29:40.896Z - info: forceInstall: false
+2017-06-19T09:29:40.896Z - info: calledByCheckupdate: false
+2017-06-19T09:29:40.896Z - info: rerun: false
+2017-06-19T09:29:41.546Z - info: Cannot Read InstallInfo.json
+2017-06-19T09:29:41.546Z - info: Use installDir from the default value
+2017-06-19T09:29:41.547Z - info: [CheckPrerequisite] Start:
+2017-06-19T09:29:41.549Z - info: root = C:
+2017-06-19T09:29:41.730Z - info: free: 133017296896
+2017-06-19T09:29:41.730Z - info: requriedSpace: 1073741824
+2017-06-19T09:29:41.731Z - info: Skipped: H:
+2017-06-19T09:29:41.731Z - info: [CheckPrerequisite] End:
+2017-06-19T09:29:41.732Z - info: [CopyFile] Start:
+2017-06-19T09:29:41.975Z - info: [CopyFile] End:
+2017-06-19T09:29:41.975Z - info: [InstallWindowsShortcut] Start:
+2017-06-19T09:29:43.762Z - info: [InstallWindowsShortcut] End:
+2017-06-19T09:29:43.762Z - info: [InstallWindowsARP] Start:
+2017-06-19T09:29:43.768Z - info: Package size is : 171739 MB
+2017-06-19T09:29:43.844Z - info: Installer: Installing registry
+2017-06-19T09:29:43.992Z - info: ARPManager: Register keys complete.
+2017-06-19T09:29:43.992Z - info: [InstallWindowsARP] End:
+2017-06-19T09:29:44.496Z - info: Launch...

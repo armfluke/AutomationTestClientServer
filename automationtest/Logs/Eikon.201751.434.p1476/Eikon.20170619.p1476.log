@@ -1,0 +1,38 @@
+2017-06-19T04:03:04.619Z - info: Read package.json
+2017-06-19T04:03:04.623Z - info: _: 
+2017-06-19T04:03:04.623Z - info: silent: false
+2017-06-19T04:03:04.623Z - info: update: false
+2017-06-19T04:03:04.623Z - info: rollback: false
+2017-06-19T04:03:04.623Z - info: uninstall: false
+2017-06-19T04:03:04.623Z - info: noshortcut: false
+2017-06-19T04:03:04.623Z - info: forceInstall: false
+2017-06-19T04:03:04.623Z - info: calledByCheckupdate: false
+2017-06-19T04:03:04.623Z - info: rerun: false
+2017-06-19T04:03:05.282Z - info: Read InstallInfo.json
+2017-06-19T04:03:05.283Z - info: Read installDir from InstallInfo.json
+2017-06-19T04:03:05.284Z - info: programPath: C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-19T04:03:05.284Z - info: programName: EikonLight.exe
+2017-06-19T04:03:06.647Z - info: 
+2017-06-19T04:03:06.648Z - info: Kill All Complete
+2017-06-19T04:03:06.649Z - info: Remove Shortcut
+2017-06-19T04:03:06.652Z - info: Remove ARP
+2017-06-19T04:03:06.653Z - info: Installer: Removing registry
+2017-06-19T04:03:06.676Z - info: ARPManager: Removing keys complete.
+2017-06-19T04:03:06.677Z - info: Remove Files
+2017-06-19T04:03:06.677Z - info: isUpdate: true
+2017-06-19T04:03:06.733Z - info: [CheckPrerequisite] Start:
+2017-06-19T04:03:06.735Z - info: root = C:
+2017-06-19T04:03:06.921Z - info: free: 147993137152
+2017-06-19T04:03:06.921Z - info: requriedSpace: 1073741824
+2017-06-19T04:03:06.921Z - info: Skipped: H:
+2017-06-19T04:03:06.922Z - info: [CheckPrerequisite] End:
+2017-06-19T04:03:06.922Z - info: [CopyFile] Start:
+2017-06-19T04:03:07.178Z - info: [CopyFile] End:
+2017-06-19T04:03:07.178Z - info: [InstallWindowsShortcut] Start:
+2017-06-19T04:03:08.293Z - info: [InstallWindowsShortcut] End:
+2017-06-19T04:03:08.293Z - info: [InstallWindowsARP] Start:
+2017-06-19T04:03:08.299Z - info: Package size is : 171739 MB
+2017-06-19T04:03:08.306Z - info: Installer: Installing registry
+2017-06-19T04:03:08.472Z - info: ARPManager: Register keys complete.
+2017-06-19T04:03:08.472Z - info: [InstallWindowsARP] End:
+2017-06-19T04:03:08.978Z - info: Launch...

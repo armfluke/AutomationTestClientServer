@@ -1,0 +1,30 @@
+2017-06-20T03:54:32.971Z - info: Read package.json
+2017-06-20T03:54:32.977Z - info: _: 
+2017-06-20T03:54:32.977Z - info: silent: false
+2017-06-20T03:54:32.977Z - info: update: false
+2017-06-20T03:54:32.977Z - info: rollback: false
+2017-06-20T03:54:32.977Z - info: uninstall: false
+2017-06-20T03:54:32.977Z - info: noshortcut: false
+2017-06-20T03:54:32.977Z - info: forceInstall: false
+2017-06-20T03:54:32.977Z - info: calledByCheckupdate: false
+2017-06-20T03:54:32.977Z - info: rerun: false
+2017-06-20T03:54:34.409Z - info: Cannot Read InstallInfo.json
+2017-06-20T03:54:34.409Z - info: Use installDir from the default value
+2017-06-20T03:54:34.411Z - info: [CheckPrerequisite] Start:
+2017-06-20T03:54:34.413Z - info: root = C:
+2017-06-20T03:54:34.600Z - info: free: 126713245696
+2017-06-20T03:54:34.600Z - info: requriedSpace: 1073741824
+2017-06-20T03:54:34.600Z - info: Skipped: H:
+2017-06-20T03:54:34.600Z - info: [CheckPrerequisite] End:
+2017-06-20T03:54:34.601Z - info: [CopyFile] Start:
+2017-06-20T03:54:38.158Z - error:  Error: EPERM: operation not permitted, rename 'C:\Users\U6062679\AppData\Local\Eikon Light\setup.exe' -> 'C:\Users\U6062679\AppData\Local\Eikon Light\EikonLight.exe'
+    at Object.fs.renameSync (fs.js:742:18)
+    at Installer.copyFiles (C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:778:25)
+    at Installer.<anonymous> (C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:511:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:7:71
+    at __awaiter (C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:3:12)
+    at Installer.installWin32 (C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:507:16)
+    at Installer.<anonymous> (C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:164:43)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\U6062679\AppData\Local\Temp\7zF2A374FC\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:4:58)

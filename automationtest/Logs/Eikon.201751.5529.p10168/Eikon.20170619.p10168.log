@@ -1,0 +1,10 @@
+2017-06-19T05:05:29.988Z - info: Read package.json
+2017-06-19T05:05:29.993Z - info: _: 
+2017-06-19T05:05:29.993Z - info: silent: false
+2017-06-19T05:05:29.994Z - info: update: false
+2017-06-19T05:05:29.994Z - info: rollback: false
+2017-06-19T05:05:29.994Z - info: uninstall: true
+2017-06-19T05:05:29.994Z - info: noshortcut: false
+2017-06-19T05:05:29.994Z - info: forceInstall: false
+2017-06-19T05:05:29.994Z - info: calledByCheckupdate: false
+2017-06-19T05:05:29.994Z - info: rerun: false
