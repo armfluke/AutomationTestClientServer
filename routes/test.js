@@ -14,12 +14,24 @@ router.get('/', function(req, res, next) {
         res.send({status: "OK"});
         var path = config.testPath;
         console.log(path)
-        exec("cd "+path+" && npm start "+req.body.name,function(error,stdout,stderr){
-            fs.readFile('../automationtest/result.json', 'utf8', function (err,data) {
+        var name;
+        if(req.params.hasOwnProperty("name")){
+            name = req.params.name
+        }else if(req.body.hasOwnProperty("name")){
+            name = req.body.name
+        }else if(req.query.hasOwnProperty("name")){
+            name = req.query.name
+        }
+        console.log(name)
+        exec("cd "+path+" && npm start "+name,function(error,stdout,stderr){
+            if(error){
+                console.log(error);
+            }
+            fs.readFile('./automationtest/result.json', 'utf8', function (err,data) {
                 if (err) {
-                    return console.log(err);
+                    console.log(err);
                 }
-                request.post('http://10.42.87.159:3000/submitres',
+                request.post(config.serverIP+'submitres',
                     {json: {result: data}},
                     function(error,response,body){
                         if(error){

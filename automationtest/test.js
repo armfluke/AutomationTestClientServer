@@ -79,8 +79,9 @@ var installationTest = function(json){
         function(success){
             console.log(success);
             return new Promise(function(resolve,reject){
-                var path = os.homedir()+json.startMenu;
-                if (fs.existsSync(path)) {
+                var pathInstall = os.homedir()+json.startMenuInstall;
+                var pathUninstall = os.homedir()+json.startMenuUninstall;
+                if (fs.existsSync(pathInstall) && fs.existsSync(pathUninstall)) {
                     resolve(json.name+" already create start menu");
                 }
                 reject("Start menu don't created");
@@ -127,12 +128,14 @@ var installationTest = function(json){
                     console.log("!!! Automation Testing pass !!!");
                     var content = {
                         name : json.name,
+                        time: new Date(),
                         status : "Pass"
                     }
                     writeFile(content);
                 }else{
                     var content = {
                         name : json.name,
+                        time: new Date(),
                         status : "Fail",
                         error : "Can't click uninstall button"
                     }
@@ -147,6 +150,7 @@ var installationTest = function(json){
     ).catch(function(error){
         var content = {
             name : json.name,
+            time: new Date(),
             status : "Fail",
             error : error
         }

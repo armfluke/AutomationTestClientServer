@@ -5,6 +5,7 @@
         "processName": "EikonLight.exe",
         "installerName": "EikonLight-installer",
         "path": "/AppData/Local/Eikon Light",
-        "startMenu": "/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Thomson Reuters/Thomson Reuters Eikon Light.lnk"
+        "startMenuInstall": "/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Thomson Reuters/Thomson Reuters Eikon Light.lnk",
+        "startMenuUninstall": "/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Thomson Reuters/Uninstall Eikon Light.lnk"
     }
 }
