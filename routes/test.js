@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
         checkIfOperating = true
         res.send({status: "OK"});
         var path = config.testPath;
+        console.log(path)
         exec("cd "+path+" && npm start "+req.body.name,function(error,stdout,stderr){
             fs.readFile('../automationtest/result.json', 'utf8', function (err,data) {
                 if (err) {

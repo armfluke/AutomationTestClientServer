@@ -2,5 +2,5 @@
     "serverIP": "http://10.42.87.159:3000/",
     "submitRoute": "submitres/",
     "port": "3000",
-    "testPath": "../automatationtest"
+    "testPath": "./automationtest"
 }
