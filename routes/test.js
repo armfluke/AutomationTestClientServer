@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var config = require('../config.json')
+var status = require('./status')
 const os = require('os');
 const exec = require("child_process").exec;
 const fs = require('fs');
@@ -9,8 +10,8 @@ const request = require("request");
 var checkIfOperating = false;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    if (!checkIfOperating) {
-        checkIfOperating = true
+    if (status.isAvailiable()) {
+        status.set('Service Unavailable')
         res.send({status: "OK"});
         var path = config.testPath;
         console.log(path)
@@ -41,7 +42,7 @@ router.get('/', function(req, res, next) {
                         }
                     }
                 );
-                checkIfOperating = false
+                status.set('Service Available')
                 //res.send(data);
             });
         });

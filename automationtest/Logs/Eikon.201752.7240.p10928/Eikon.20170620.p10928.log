@@ -1,0 +1,37 @@
+2017-06-20T07:24:01.487Z - info: Read package.json
+2017-06-20T07:24:01.494Z - info: _: 
+2017-06-20T07:24:01.494Z - info: silent: false
+2017-06-20T07:24:01.494Z - info: update: false
+2017-06-20T07:24:01.494Z - info: rollback: false
+2017-06-20T07:24:01.494Z - info: uninstall: false
+2017-06-20T07:24:01.494Z - info: noshortcut: false
+2017-06-20T07:24:01.494Z - info: forceInstall: false
+2017-06-20T07:24:01.495Z - info: calledByCheckupdate: false
+2017-06-20T07:24:01.495Z - info: rerun: false
+2017-06-20T07:24:03.052Z - info: Read InstallInfo.json
+2017-06-20T07:24:03.054Z - info: Read installDir from InstallInfo.json
+2017-06-20T07:24:03.056Z - info: programPath: C:\Users\U6062678\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-20T07:24:03.056Z - info: programName: EikonLight.exe
+2017-06-20T07:24:08.611Z - info:  command=EikonLight.exe, pid=2164, command=EikonLight.exe, pid=11140, command=EikonLight.exe, pid=8784, command=EikonLight.exe, pid=2760, command=EikonLight.exe, pid=7544, command=EikonLight.exe, pid=13272, command=EikonLight.exe, pid=11068
+2017-06-20T07:24:09.819Z - info: Kill All Complete
+2017-06-20T07:24:09.820Z - info: Remove Shortcut
+2017-06-20T07:24:09.827Z - info: Remove ARP
+2017-06-20T07:24:09.828Z - info: Installer: Removing registry
+2017-06-20T07:24:09.903Z - info: ARPManager: Removing keys complete.
+2017-06-20T07:24:09.904Z - info: Remove Files
+2017-06-20T07:24:09.905Z - info: isUpdate: true
+2017-06-20T07:24:09.963Z - info: [CheckPrerequisite] Start:
+2017-06-20T07:24:09.966Z - info: root = C:
+2017-06-20T07:24:10.289Z - info: free: 152848781312
+2017-06-20T07:24:10.289Z - info: requriedSpace: 1073741824
+2017-06-20T07:24:10.289Z - info: [CheckPrerequisite] End:
+2017-06-20T07:24:10.290Z - info: [CopyFile] Start:
+2017-06-20T07:24:10.791Z - info: [CopyFile] End:
+2017-06-20T07:24:10.791Z - info: [InstallWindowsShortcut] Start:
+2017-06-20T07:24:11.140Z - info: [InstallWindowsShortcut] End:
+2017-06-20T07:24:11.140Z - info: [InstallWindowsARP] Start:
+2017-06-20T07:24:11.149Z - info: Package size is : 171739 MB
+2017-06-20T07:24:11.161Z - info: Installer: Installing registry
+2017-06-20T07:24:11.567Z - info: ARPManager: Register keys complete.
+2017-06-20T07:24:11.567Z - info: [InstallWindowsARP] End:
+2017-06-20T07:24:12.078Z - info: Launch...

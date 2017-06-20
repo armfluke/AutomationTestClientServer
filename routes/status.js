@@ -1,7 +1,7 @@
-const OK = 'Service Availiable'
-const BUSY = 'Service Unavailiable'
+const OK = 'Service Available'
+const BUSY = 'Service Unavailable'
 
-var status = OK
+var status = "Service Available"
 
 var get = function() {
     return {
@@ -9,12 +9,12 @@ var get = function() {
     }
 }
 
-var set = function(status) {
-    this.status = status
+var set = function(newStatus) {
+    status = newStatus
 }
 
 var isAvailiable = function() {
-    return this.status === OK
+    return status == OK
 }
 
 module.exports.set = set

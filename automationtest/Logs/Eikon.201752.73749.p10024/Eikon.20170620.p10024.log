@@ -1,0 +1,43 @@
+2017-06-20T07:37:50.733Z - info: Read package.json
+2017-06-20T07:37:50.740Z - info: _: 
+2017-06-20T07:37:50.740Z - info: silent: false
+2017-06-20T07:37:50.741Z - info: update: false
+2017-06-20T07:37:50.741Z - info: rollback: false
+2017-06-20T07:37:50.741Z - info: uninstall: false
+2017-06-20T07:37:50.741Z - info: noshortcut: false
+2017-06-20T07:37:50.741Z - info: forceInstall: false
+2017-06-20T07:37:50.741Z - info: calledByCheckupdate: false
+2017-06-20T07:37:50.741Z - info: rerun: false
+2017-06-20T07:37:51.794Z - info: Read InstallInfo.json
+2017-06-20T07:37:51.795Z - info: Read installDir from InstallInfo.json
+2017-06-20T07:37:51.798Z - info: programPath: C:\Users\U6062678\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-20T07:37:51.798Z - info: programName: EikonLight.exe
+2017-06-20T07:37:55.876Z - info: 
+2017-06-20T07:37:55.877Z - info: Kill All Complete
+2017-06-20T07:37:55.878Z - info: Remove Shortcut
+2017-06-20T07:37:55.878Z - info: install info file does not exist
+2017-06-20T07:37:55.879Z - info: Remove ARP
+2017-06-20T07:37:55.880Z - info: Installer: Removing registry
+2017-06-20T07:37:55.941Z - warn: Installer: Fail to remove key - ProcessUncleanExitError: DELETE command exited with code 1:
+
+ERROR: The system was unable to find the specified registry key or value.
+2017-06-20T07:37:55.943Z - info: Remove Files
+2017-06-20T07:37:55.943Z - info: isUpdate: true
+2017-06-20T07:37:55.943Z - info: install info file does not exist
+2017-06-20T07:37:55.945Z - info: [CheckPrerequisite] Start:
+2017-06-20T07:37:55.947Z - info: root = C:
+2017-06-20T07:37:56.207Z - info: free: 151763750912
+2017-06-20T07:37:56.207Z - info: requriedSpace: 1073741824
+2017-06-20T07:37:56.207Z - info: [CheckPrerequisite] End:
+2017-06-20T07:37:56.208Z - info: [CopyFile] Start:
+2017-06-20T07:37:56.287Z - error:  Error: EPERM: operation not permitted, unlink 'C:\Users\U6062678\AppData\Local\Eikon Light\ffmpeg.dll'
+    at Object.fs.unlinkSync (fs.js:1007:18)
+    at copyFileSync (C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\node_modules\fs-extra\lib\copy-sync\copy-file-sync.js:15:10)
+    at copySync (C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\node_modules\fs-extra\lib\copy-sync\copy-sync.js:43:5)
+    at contents.forEach.content (C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\node_modules\fs-extra\lib\copy-sync\copy-sync.js:54:7)
+    at Array.forEach (native)
+    at Object.copySync (C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\node_modules\fs-extra\lib\copy-sync\copy-sync.js:51:14)
+    at Installer.copyFiles (C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:764:21)
+    at Installer.<anonymous> (C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:511:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\U6062678\AppData\Local\Temp\7z5710569C\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:7:71

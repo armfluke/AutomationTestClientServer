@@ -1,0 +1,43 @@
+2017-06-20T07:24:05.888Z - info: Read package.json
+2017-06-20T07:24:05.896Z - info: _: 
+2017-06-20T07:24:05.896Z - info: silent: false
+2017-06-20T07:24:05.896Z - info: update: false
+2017-06-20T07:24:05.897Z - info: rollback: false
+2017-06-20T07:24:05.897Z - info: uninstall: false
+2017-06-20T07:24:05.897Z - info: noshortcut: false
+2017-06-20T07:24:05.897Z - info: forceInstall: false
+2017-06-20T07:24:05.897Z - info: calledByCheckupdate: false
+2017-06-20T07:24:05.897Z - info: rerun: false
+2017-06-20T07:24:06.770Z - info: Read InstallInfo.json
+2017-06-20T07:24:06.772Z - info: Read installDir from InstallInfo.json
+2017-06-20T07:24:06.774Z - info: programPath: C:\Users\U6062678\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-20T07:24:06.774Z - info: programName: EikonLight.exe
+2017-06-20T07:24:11.998Z - info:  command=EikonLight.exe, pid=2164, command=EikonLight.exe, pid=11140, command=EikonLight.exe, pid=8784, command=EikonLight.exe, pid=2760, command=EikonLight.exe, pid=7544, command=EikonLight.exe, pid=13272, command=EikonLight.exe, pid=11068, command=EikonLight.exe, pid=4404, command=EikonLight.exe, pid=13448
+2017-06-20T07:24:12.884Z - info: Kill All Complete
+2017-06-20T07:24:12.885Z - info: Remove Shortcut
+2017-06-20T07:24:12.886Z - info: install info file does not exist
+2017-06-20T07:24:12.887Z - info: Remove ARP
+2017-06-20T07:24:12.888Z - info: Installer: Removing registry
+2017-06-20T07:24:13.023Z - warn: Installer: Fail to remove key - ProcessUncleanExitError: DELETE command exited with code 1:
+
+ERROR: The system was unable to find the specified registry key or value.
+2017-06-20T07:24:13.024Z - info: Remove Files
+2017-06-20T07:24:13.024Z - info: isUpdate: true
+2017-06-20T07:24:13.025Z - info: install info file does not exist
+2017-06-20T07:24:13.030Z - info: [CheckPrerequisite] Start:
+2017-06-20T07:24:13.033Z - info: root = C:
+2017-06-20T07:24:13.597Z - info: free: 152674287616
+2017-06-20T07:24:13.597Z - info: requriedSpace: 1073741824
+2017-06-20T07:24:13.597Z - info: [CheckPrerequisite] End:
+2017-06-20T07:24:13.598Z - info: [CopyFile] Start:
+2017-06-20T07:24:14.086Z - error:  Error: ENOENT: no such file or directory, rename 'C:\Users\U6062678\AppData\Local\Eikon Light\resources\product.asar' -> 'C:\Users\U6062678\AppData\Local\Eikon Light\resources\app.asar'
+    at Object.fs.renameSync (fs.js:742:18)
+    at Installer.copyFiles (C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:781:21)
+    at Installer.<anonymous> (C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:511:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:7:71
+    at __awaiter (C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:3:12)
+    at Installer.installWin32 (C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:507:16)
+    at Installer.<anonymous> (C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:164:43)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\U6062678\AppData\Local\Temp\7z90E0E038\xplatform-installer-win32-x64\resources\app.asar\src\installer.js:4:58)
