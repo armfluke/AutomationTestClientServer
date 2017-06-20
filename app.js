@@ -9,9 +9,11 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var test = require('./routes/test');
 var request = require('./routes/request');
+var init = require('./routes/initialize')
+
+init.sendIP()
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
