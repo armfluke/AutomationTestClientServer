@@ -1,5 +1,6 @@
 var robot = require("robotjs");
 var os = require('os');
+var osName = require('os-name');
 const fs = require('fs');
 const exec = require("child_process").exec
 
@@ -129,8 +130,7 @@ var installationTest = function(json){
                     var content = {
                         name : json.name,
                         hostName: os.hostname(),
-                        osType: os.type(),
-                        platform: os.platform(),
+                        os: osName(os.platform(), os.release()),
                         osArch: os.arch(),
                         time: new Date(),
                         status : "Pass"
@@ -141,8 +141,7 @@ var installationTest = function(json){
                         name : json.name,
                         time: new Date(),
                         hostName: os.hostname(),
-                        osType: os.type(),
-                        platform: os.platform(),
+                        os: osName(os.platform(), os.release()),
                         osArch: os.arch(),
                         status : "Fail",
                         error : "Can't click uninstall button"
@@ -160,8 +159,7 @@ var installationTest = function(json){
             name : json.name,
             time: new Date(),
             hostName: os.hostname(),
-            osType: os.type(),
-            platform: os.platform(),
+            os: osName(os.platform(), os.release()),
             osArch: os.arch(),
             status : "Fail",
             error : error
