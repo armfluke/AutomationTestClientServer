@@ -10,8 +10,10 @@ var users = require('./routes/users');
 var test = require('./routes/test');
 var init = require('./routes/initialize')
 var getstatus = require('./routes/getstatus')
+
 init.sendIP()
 init.downloadInstaller()
+init.copyBat()
 
 var app = express();
 // view engine setup

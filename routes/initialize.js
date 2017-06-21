@@ -3,6 +3,8 @@ var fs = require('fs')
 var http = require('http')
 var request = require('request')
 var ip = require('ip')
+var ncp = require('ncp').ncp
+var cpr = require('cpr').cpr
 
 var sendIP = function() {
     var serverRoute = config.serverIP + 'init'
@@ -32,5 +34,28 @@ var downloadInstaller = function() {
     }
 }
 
+var copyBat = function() {
+    var dest = process.env.USERPROFILE + '\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\test.bat'
+    var batDir = __dirname
+    batDir = batDir.substr(0, batDir.length - 6)
+    var src =  batDir + '\\bat\\test.bat'
+    console.log('start copy test.bat from ' + src + ' to ' + dest)
+    cpr(src, dest, { overwrite: true }, function(err){
+        if (err) {
+            console.log(err)
+        }
+        else {
+            console.log('copy done')
+        }
+    })
+    // ncp(src, dest, function(err) {
+    //     if (err) {
+    //         return console.err
+    //     }
+    //     console.log('copy test.bat to ' + dest)
+    // })
+}
+
 module.exports.downloadInstaller = downloadInstaller
 module.exports.sendIP = sendIP
+module.exports.copyBat = copyBat
