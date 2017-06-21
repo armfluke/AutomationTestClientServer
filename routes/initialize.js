@@ -1,4 +1,6 @@
 var config = require('../config.json')
+var fs = require('fs')
+var http = require('http')
 var request = require('request')
 var ip = require('ip')
 
@@ -17,4 +19,18 @@ var sendIP = function() {
     })
 }
 
+var downloadInstaller = function() {
+    var path = process.env.USERPROFILE + config.installerPath
+    // console.log(path)
+    if (!fs.existsSync(path)) {
+        console.log('start downloading to path ' + path + ' from ' + config.installerUrl)
+        var file = fs.createWriteStream(path)
+        var request = http.get(config.installerUrl, function(response) {
+            response.pipe(file)
+            console.log('download done')
+        })
+    }
+}
+
+module.exports.downloadInstaller = downloadInstaller
 module.exports.sendIP = sendIP

@@ -11,6 +11,7 @@ var test = require('./routes/test');
 var init = require('./routes/initialize')
 var getstatus = require('./routes/getstatus')
 init.sendIP()
+init.downloadInstaller()
 
 var app = express();
 // view engine setup
