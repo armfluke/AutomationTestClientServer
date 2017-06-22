@@ -5,7 +5,7 @@ const fs = require('fs');
 const exec = require("child_process").exec;
 var ip = require('ip');
 
-function clickUninstall(){
+function clickUninstall(json){
     var screenSize = robot.getScreenSize();
     var height = screenSize.height;
     var width = screenSize.width;
@@ -18,13 +18,28 @@ function clickUninstall(){
             return true;
         }
     }
+    exec('taskkill /IM setup.exe /F',function(error,stdout,stderr){
+        if(error){
+            console.log("Can't find process "+json.processName);
+        }
+        return false;
+    });
 }
 
 function writeFile(content,time){
-    fs.writeFile(time+'result.json', JSON.stringify(content), function (err) {
-        if (err){
-            console.log(err);
+    console.log(time)
+    var automationPath = __dirname
+    automationPath = automationPath.substr(0, automationPath.length - 14)
+    fs.mkdir(automationPath + "/TestLogs/" + time,function(error){
+        if(error){
+            console.log(error)
         }
+        console.log(automationPath)
+        fs.writeFile(automationPath + "/TestLogs/" + time + '/result.json', JSON.stringify(content), function (err) {
+            if (err){
+                console.log(err);
+            }
+        });
     });
 }
 
@@ -38,7 +53,7 @@ function checkProcess(json){
     }, 3000);
 }
 
-function writeResult(json,status,error){
+function writeResult(json,status,error,time){
     if(status == "Pass"){
         var content = {
             name : json.name,
@@ -153,10 +168,10 @@ var uninstall = function(json,time){
     }).then(     //click to uninstall
         function(){
             setTimeout(function(){
-                if(clickUninstall()){
-                    writeResult(json,"Pass","");
+                if(clickUninstall(json)){
+                    writeResult(json,"Pass","",time);
                 }else{
-                    writeResult(json,"Fail","Can't click install button")
+                    writeResult(json,"Fail","Can't click install button",time)
                 }
             }, 7000);
         },function(error){
@@ -168,9 +183,9 @@ var uninstall = function(json,time){
 }
 
 var installationTest = function(json,time){
-     install(json).then(function(){
+     install(json,time).then(function(){
         uninstall(json,time);
-     },function(error,time){
+     },function(error){
         throw error
      }).catch(function(error){
         writeResult(json,"Fail",error,time);

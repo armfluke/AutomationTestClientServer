@@ -45,7 +45,7 @@ router.get('/', function (req, res, next) {
             else {
                 if (test === 'InstallationTest') {
                     res.send({ status: "OK" });
-                    runInstallationTest(name)
+                    runInstallationTest(name, path)
                 }
                 else {
                     res.send({ 
@@ -63,19 +63,20 @@ router.get('/', function (req, res, next) {
     //res.render('index', { title: 'Express' });
 });
 
-function runInstallationTest(name) {
+function runInstallationTest(name, path) {
     console.log(name)
     var time = new Date();
-    exec("cd " + path + " && npm start " + name + " " + time.toISOString(), function(error, stdout, stderr){
+    var date = time.toISOString().replace(/\:/g, '-');
+    exec("cd " + path + " && npm start " + name + " " + date, function(error, stdout, stderr){
         if(error){
             console.log(error);
         }
-        sendResult(time)
+        sendResult(date)
     });
 }
 
 function sendResult(time) {
-    fs.readFile('./automationtest/' + time + '/result.json', 'utf8', function (err, data) {
+    fs.readFile('./TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
         if (err) {
             console.log(err);
         }
