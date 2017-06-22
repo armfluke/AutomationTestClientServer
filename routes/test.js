@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
         var path = config.testPath;
         console.log(path)
         
-        var name = req.param.name || req.body.name || req.query.name
+        var name = req.body.name
         if(!name) {
             res.send({status: "Error", error: "Please attach product name with HTTP request"});
             status.set("Service Available");
@@ -38,11 +38,12 @@ router.get('/', function(req, res, next) {
             else {
                 res.send({status: "OK"});
                 console.log(name)
-                exec("cd " + path + " && npm start " + name, function(error, stdout, stderr){
+                var time = new Date();
+                exec("cd " + path + " && npm start " + name +" "+ time, function(error, stdout, stderr){
                     if(error){
                         console.log(error);
                     }
-                    fs.readFile('./automationtest/result.json', 'utf8', function (err,data) {
+                    fs.readFile('./automationtest/'+time+'/result.json', 'utf8', function (err,data) {
                         if (err) {
                             console.log(err);
                         }

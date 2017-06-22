@@ -20,8 +20,8 @@ function clickUninstall(){
     }
 }
 
-function writeFile(content){
-    fs.writeFile('result.json', JSON.stringify(content), function (err) {
+function writeFile(content,time){
+    fs.writeFile(time+'result.json', JSON.stringify(content), function (err) {
         if (err){
             console.log(err);
         }
@@ -46,7 +46,7 @@ function writeResult(json,status,error){
             ip: ip.address(),
             os: osName(os.platform(), os.release()),
             osArch: os.arch(),
-            time: new Date(),
+            time: time,
             status : "Pass"
         }
         console.log(json.name+" successfully uninstall");
@@ -59,17 +59,17 @@ function writeResult(json,status,error){
             ip: ip.address(),
             os: osName(os.platform(), os.release()),
             osArch: os.arch(),
-            time: new Date(),
+            time: time,
             status : status,
             error : error
         }
         console.log("------------------------------");
         console.log("!!! Automation Testing fail !!!");
     }
-    writeFile(content);
+    writeFile(content,time);
 }
 
-var install = function(json){
+var install = function(json,time){
     return new Promise(function(resolve,reject){   //install program
         console.log("Start installing "+json.name);
         var path = os.homedir()+json.installer;
@@ -139,7 +139,7 @@ var install = function(json){
     )
 }
 
-var uninstall = function(json){
+var uninstall = function(json,time){
     return new Promise(function(resolve,reject){
         console.log("Uninstalling "+json.name);
         checkProcess(json);
@@ -163,17 +163,17 @@ var uninstall = function(json){
             throw error;
         }
     ).catch(function(error){
-        writeResult(json,"Fail",error);
+        writeResult(json,"Fail",error,time);
     });
 }
 
-var installationTest = function(json){
+var installationTest = function(json,time){
      install(json).then(function(){
-        uninstall(json);
-     },function(error){
+        uninstall(json,time);
+     },function(error,time){
         throw error
      }).catch(function(error){
-        writeResult(json,"Fail",error);
+        writeResult(json,"Fail",error,time);
     });
 }
 
