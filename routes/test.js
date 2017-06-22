@@ -15,14 +15,9 @@ router.get('/', function(req, res, next) {
         status.set('Service Unavailable')
         var path = config.testPath;
         console.log(path)
-        var name;
-        if(req.params.hasOwnProperty("name")){
-            name = req.params.name
-        }else if(req.body.hasOwnProperty("name")){
-            name = req.body.name
-        }else if(req.query.hasOwnProperty("name")){
-            name = req.query.name
-        }else{
+        
+        var name = req.param.name || req.body.name || req.query.name
+        if(!name) {
             res.send({status: "Error", error: "Please attach product name with HTTP request"});
             status.set("Service Available");
             return;
