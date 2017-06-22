@@ -12,7 +12,7 @@ var init = require('./routes/initialize')
 var getstatus = require('./routes/getstatus')
 
 init.sendIP()
-init.downloadInstaller()
+// init.downloadInstaller()
 init.copyBat()
 
 var app = express();

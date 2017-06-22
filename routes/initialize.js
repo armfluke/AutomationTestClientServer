@@ -20,19 +20,6 @@ var sendIP = function() {
     })
 }
 
-var downloadInstaller = function() {
-    var path = process.env.USERPROFILE + config.installerPath
-    // console.log(path)
-    if (!fs.existsSync(path)) {
-        console.log('start downloading to path ' + path + ' from ' + config.installerUrl)
-        var file = fs.createWriteStream(path)
-        var request = http.get(config.installerUrl, function(response) {
-            response.pipe(file)
-            console.log('download done')
-        })
-    }
-}
-
 var copyBat = function() {
     var dest = process.env.USERPROFILE + '\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\test.bat'
     var batDir = __dirname
@@ -55,6 +42,5 @@ var copyBat = function() {
     // })
 }
 
-module.exports.downloadInstaller = downloadInstaller
 module.exports.sendIP = sendIP
 module.exports.copyBat = copyBat
