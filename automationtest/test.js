@@ -2,9 +2,10 @@ var robot = require("robotjs");
 var os = require('os');
 var osName = require('os-name');
 const fs = require('fs');
-const exec = require("child_process").exec
+const exec = require("child_process").exec;
+var ip = require('ip');
 
-function uninstall(){
+function clickUninstall(){
     var screenSize = robot.getScreenSize();
     var height = screenSize.height;
     var width = screenSize.width;
@@ -37,8 +38,39 @@ function checkProcess(json){
     }, 3000);
 }
 
-var installationTest = function(json){
-    new Promise(function(resolve,reject){   //install program
+function writeResult(json,status,error){
+    if(status == "Pass"){
+        var content = {
+            name : json.name,
+            hostName: os.hostname(),
+            ip: ip.address(),
+            os: osName(os.platform(), os.release()),
+            osArch: os.arch(),
+            time: new Date(),
+            status : "Pass"
+        }
+        console.log(json.name+" successfully uninstall");
+        console.log("------------------------------");
+        console.log("!!! Automation Testing pass !!!");
+    }else{
+        var content = {
+            name : json.name,
+            hostName: os.hostname(),
+            ip: ip.address(),
+            os: osName(os.platform(), os.release()),
+            osArch: os.arch(),
+            time: new Date(),
+            status : status,
+            error : error
+        }
+        console.log("------------------------------");
+        console.log("!!! Automation Testing fail !!!");
+    }
+    writeFile(content);
+}
+
+var install = function(json){
+    return new Promise(function(resolve,reject){   //install program
         console.log("Start installing "+json.name);
         var path = os.homedir()+json.installer;
         checkProcess(json);
@@ -104,70 +136,47 @@ var installationTest = function(json){
         },function(error){
             throw error;
         }
-    ).then(     //Uninstall program
-        function(){
-            return new Promise(function(resolve,reject){
-                console.log("Uninstalling "+json.name);
-                checkProcess(json);
-                var path = os.homedir()+json.installer+" --uninstall";
-                exec('start '+path,function(error,stdout,stderr){
-                    if(error){
-                        reject("Can't find "+json.name+" installer");
-                    }
-                });
-                resolve();
-            });
-        },function(error){
-            throw error;
-        }
-    ).then(     //click to uninstall
+    )
+}
+
+var uninstall = function(json){
+    return new Promise(function(resolve,reject){
+        console.log("Uninstalling "+json.name);
+        checkProcess(json);
+        var path = os.homedir()+json.installer+" --uninstall";
+        exec('start '+path,function(error,stdout,stderr){
+            if(error){
+                reject("Can't find "+json.name+" installer");
+            }
+        });
+        resolve();
+    }).then(     //click to uninstall
         function(){
             setTimeout(function(){
-                if(uninstall()){
-                    console.log(json.name+" successfully uninstall");
-                    console.log("------------------------------");
-                    console.log("!!! Automation Testing pass !!!");
-                    var content = {
-                        name : json.name,
-                        hostName: os.hostname(),
-                        os: osName(os.platform(), os.release()),
-                        osArch: os.arch(),
-                        time: new Date(),
-                        status : "Pass"
-                    }
-                    writeFile(content);
+                if(clickUninstall()){
+                    writeResult(json,"Pass","");
                 }else{
-                    var content = {
-                        name : json.name,
-                        time: new Date(),
-                        hostName: os.hostname(),
-                        os: osName(os.platform(), os.release()),
-                        osArch: os.arch(),
-                        status : "Fail",
-                        error : "Can't click uninstall button"
-                    }
-                    writeFile(content);
-                    console.log("------------------------------");
-                    console.log("!!! Automation Testing fail !!!");
+                    writeResult(json,"Fail","Can't click install button")
                 }
             }, 7000);
         },function(error){
             throw error;
         }
     ).catch(function(error){
-        var content = {
-            name : json.name,
-            time: new Date(),
-            hostName: os.hostname(),
-            os: osName(os.platform(), os.release()),
-            osArch: os.arch(),
-            status : "Fail",
-            error : error
-        }
-        writeFile(content);
-        console.log("------------------------------");
-        console.log("!!! Automation Testing fail !!!");
+        writeResult(json,"Fail",error);
     });
 }
 
+var installationTest = function(json){
+     install(json).then(function(){
+        uninstall(json);
+     },function(error){
+        throw error
+     }).catch(function(error){
+        writeResult(json,"Fail",error);
+    });
+}
+
+exports.install = install;
+exports.uninstall = uninstall;
 exports.installationTest = installationTest;
