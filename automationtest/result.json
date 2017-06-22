@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"name":"Eikon Light","time":"2017-06-22T08:33:47.733Z","hostName":"182LOAN-TPL-CD","os":"Windows 7","osArch":"x64","status":"Fail","error":"Can't click uninstall button"}
+=======
+{"name":"Eikon Light","hostName":"PANUDDAPC","ip":"10.42.65.139","os":"Windows 10","osArch":"x64","time":"2017-06-22T08:25:55.770Z","status":"Pass"}
+>>>>>>> 1259d295f438b2a0aa576fa2a733ab2744e9e481
