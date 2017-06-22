@@ -3,7 +3,6 @@ var fs = require('fs')
 var http = require('http')
 var request = require('request')
 var ip = require('ip')
-var ncp = require('ncp').ncp
 var cpr = require('cpr').cpr
 
 var sendIP = function() {
