@@ -43,41 +43,55 @@ router.get('/', function (req, res, next) {
                 res.send({ status: "Error", error: "Download Installer Failed (url: " + downloadUrl + ")" })
             }
             else {
-                
-                res.send({ status: "OK" });
-                console.log(name)
-                var time = new Date();
-                exec("cd " + path + " && npm start " + name +" "+ time, function(error, stdout, stderr){
-                    if(error){
-                        console.log(error);
-                    }
-                    fs.readFile('./automationtest/'+time+'/result.json', 'utf8', function (err,data) {
-                        if (err) {
-                            console.log(err);
-                        }
-                        request.post(config.serverIP + 'submitres',
-                            { json: { result: data } },
-                            function (error, response, body) {
-                                if (error) {
-                                    console.log(error);
-                                } else {
-                                    console.log(response.body);
-                                }
-                            }
-                        );
-                        status.set('Service Available')
-                        //res.send(data);
-                    });
-                });
+                if (test === 'InstallationTest') {
+                    res.send({ status: "OK" });
+                    runInstallationTest(name)
+                }
+                else {
+                    res.send({ 
+                        status: "Error",
+                        error: "There is no Test (" + test + ")"
+                    })
+                }
             }
         })
-    } else {
+    } 
+    else {
         res.send({ status: "Server is busy, try again in few minute" })
     }
 
     //res.render('index', { title: 'Express' });
 });
 
+function runInstallationTest(name) {
+    console.log(name)
+    var time = new Date();
+    exec("cd " + path + " && npm start " + name + " " + time.toISOString(), function(error, stdout, stderr){
+        if(error){
+            console.log(error);
+        }
+        sendResult(time)
+    });
+}
+
+function sendResult(time) {
+    fs.readFile('./automationtest/' + time + '/result.json', 'utf8', function (err, data) {
+        if (err) {
+            console.log(err);
+        }
+        request.post(config.serverIP + 'submitres', { json: { result: data } },
+            function (error, response, body) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log(response.body);
+                }
+            }
+        );
+
+        status.set('Service Available')
+    });
+}
 
 function downloadInstaller(path, url, callback) {
     // var path = 
