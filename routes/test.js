@@ -15,10 +15,17 @@ router.get('/', function (req, res, next) {
         status.set('Service Unavailable')
         var path = config.testPath;
         console.log(path)
+<<<<<<< HEAD
 
         var name = req.param.name || req.body.name || req.query.name
         if (!name) {
             res.send({ status: "Error", error: "Please attach product name with HTTP request" });
+=======
+        
+        var name = req.body.name
+        if(!name) {
+            res.send({status: "Error", error: "Please attach product name with HTTP request"});
+>>>>>>> 2911a3d136ab634056e3b913e37fe39f444d19da
             status.set("Service Available");
             return;
         }
@@ -46,11 +53,20 @@ router.get('/', function (req, res, next) {
                 
                 res.send({ status: "OK" });
                 console.log(name)
+<<<<<<< HEAD
                 exec("cd " + path + " && npm start " + name, function (error, stdout, stderr) {
                     if (error) {
                         console.log(error);
                     }
                     fs.readFile('./automationtest/result.json', 'utf8', function (err, data) {
+=======
+                var time = new Date();
+                exec("cd " + path + " && npm start " + name +" "+ time, function(error, stdout, stderr){
+                    if(error){
+                        console.log(error);
+                    }
+                    fs.readFile('./automationtest/'+time+'/result.json', 'utf8', function (err,data) {
+>>>>>>> 2911a3d136ab634056e3b913e37fe39f444d19da
                         if (err) {
                             console.log(err);
                         }
