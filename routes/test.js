@@ -23,14 +23,19 @@ router.get('/', function (req, res, next) {
             return;
         }
 
-        var downloadUrl = req.body.url
+        var downloadUrl = req.body.url 
         if (!downloadUrl) {
             res.send({ status: "Error", error: "Please attach download url with HTTP request" })
             status.set("Service Available")
             return;
         }
 
-        var test = req.body.test || req.params.test
+        var test = req.body.test
+        if (!test) {
+            res.send({ status: "No test found" })
+            status.set("Service Available")
+            return;
+        }
 
         downloadInstaller(process.env.USERPROFILE + config.installerPath, downloadUrl, function (downloadResponse, err) {
             if (err) {
