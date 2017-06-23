@@ -1,0 +1,41 @@
+2017-06-22T10:27:08.375Z - info: Read package.json
+2017-06-22T10:27:08.375Z - info: _: 
+2017-06-22T10:27:08.375Z - info: silent: false
+2017-06-22T10:27:08.375Z - info: update: false
+2017-06-22T10:27:08.375Z - info: rollback: false
+2017-06-22T10:27:08.375Z - info: uninstall: false
+2017-06-22T10:27:08.375Z - info: noshortcut: false
+2017-06-22T10:27:08.375Z - info: forceInstall: false
+2017-06-22T10:27:08.375Z - info: calledByCheckupdate: false
+2017-06-22T10:27:08.375Z - info: rerun: false
+2017-06-22T10:27:08.859Z - info: Read InstallInfo.json
+2017-06-22T10:27:08.860Z - info: Read installDir from InstallInfo.json
+2017-06-22T10:27:08.861Z - info: programPath: C:\Users\PanuddaN\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-22T10:27:08.861Z - info: programName: EikonLight.exe
+2017-06-22T10:27:09.793Z - info: 
+2017-06-22T10:27:09.793Z - info: Kill All Complete
+2017-06-22T10:27:09.793Z - info: Remove Shortcut
+2017-06-22T10:27:09.793Z - info: Remove ARP
+2017-06-22T10:27:09.793Z - info: Installer: Removing registry
+2017-06-22T10:27:09.809Z - info: ARPManager: Removing keys complete.
+2017-06-22T10:27:09.809Z - info: Remove Files
+2017-06-22T10:27:09.809Z - info: isUpdate: true
+2017-06-22T10:27:09.882Z - info: [CheckPrerequisite] Start:
+2017-06-22T10:27:09.883Z - info: root = C:
+2017-06-22T10:27:09.985Z - info: free: 54165544960
+2017-06-22T10:27:09.986Z - info: requriedSpace: 1073741824
+2017-06-22T10:27:09.986Z - info: Skipped: Y:
+2017-06-22T10:27:09.986Z - info: Skipped: Z:
+2017-06-22T10:27:09.986Z - info: [CheckPrerequisite] End:
+2017-06-22T10:27:09.986Z - info: [CopyFile] Start:
+2017-06-22T10:27:10.257Z - info: [CopyFile] End:
+2017-06-22T10:27:10.257Z - info: [InstallWindowsShortcut] Start:
+2017-06-22T10:27:10.583Z - info: [InstallWindowsShortcut] End:
+2017-06-22T10:27:10.583Z - info: [InstallWindowsARP] Start:
+2017-06-22T10:27:10.589Z - info: Package size is : 171739 MB
+2017-06-22T10:27:10.595Z - info: Installer: Installing registry
+2017-06-22T10:27:10.697Z - info: ARPManager: Register keys complete.
+2017-06-22T10:27:10.697Z - info: [InstallWindowsARP] End:
+2017-06-22T10:27:11.218Z - info: Launch...
+2017-06-22T10:27:11.218Z - info: programPath: C:\Users\PanuddaN\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-22T10:27:11.218Z - info: installPath: C:\Users\PanuddaN\AppData\Local\Eikon Light

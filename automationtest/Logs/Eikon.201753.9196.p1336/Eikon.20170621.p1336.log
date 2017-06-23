@@ -1,0 +1,31 @@
+2017-06-21T09:19:07.070Z - info: Read package.json
+2017-06-21T09:19:07.070Z - info: _: 
+2017-06-21T09:19:07.070Z - info: silent: false
+2017-06-21T09:19:07.070Z - info: update: false
+2017-06-21T09:19:07.070Z - info: rollback: false
+2017-06-21T09:19:07.070Z - info: uninstall: false
+2017-06-21T09:19:07.070Z - info: noshortcut: false
+2017-06-21T09:19:07.070Z - info: forceInstall: false
+2017-06-21T09:19:07.070Z - info: calledByCheckupdate: false
+2017-06-21T09:19:07.070Z - info: rerun: false
+2017-06-21T09:19:07.527Z - info: Cannot Read InstallInfo.json
+2017-06-21T09:19:07.527Z - info: Use installDir from the default value
+2017-06-21T09:19:07.528Z - info: [CheckPrerequisite] Start:
+2017-06-21T09:19:07.530Z - info: root = C:
+2017-06-21T09:19:07.621Z - info: free: 62675968000
+2017-06-21T09:19:07.622Z - info: requriedSpace: 1073741824
+2017-06-21T09:19:07.622Z - info: Skipped: Y:
+2017-06-21T09:19:07.622Z - info: Skipped: Z:
+2017-06-21T09:19:07.622Z - info: [CheckPrerequisite] End:
+2017-06-21T09:19:07.622Z - info: [CopyFile] Start:
+2017-06-21T09:19:07.897Z - info: [CopyFile] End:
+2017-06-21T09:19:07.897Z - info: [InstallWindowsShortcut] Start:
+2017-06-21T09:19:08.215Z - info: [InstallWindowsShortcut] End:
+2017-06-21T09:19:08.215Z - info: [InstallWindowsARP] Start:
+2017-06-21T09:19:08.220Z - info: Package size is : 171739 MB
+2017-06-21T09:19:08.225Z - info: Installer: Installing registry
+2017-06-21T09:19:08.332Z - info: ARPManager: Register keys complete.
+2017-06-21T09:19:08.332Z - info: [InstallWindowsARP] End:
+2017-06-21T09:19:08.849Z - info: Launch...
+2017-06-21T09:19:08.849Z - info: programPath: C:\Users\PanuddaN\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-21T09:19:08.849Z - info: installPath: C:\Users\PanuddaN\AppData\Local\Eikon Light

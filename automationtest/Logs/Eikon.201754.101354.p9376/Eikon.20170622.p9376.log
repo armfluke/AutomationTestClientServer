@@ -1,0 +1,22 @@
+2017-06-22T10:13:54.551Z - info: Read package.json
+2017-06-22T10:13:54.551Z - info: _: 
+2017-06-22T10:13:54.551Z - info: silent: false
+2017-06-22T10:13:54.551Z - info: update: false
+2017-06-22T10:13:54.551Z - info: rollback: false
+2017-06-22T10:13:54.551Z - info: uninstall: true
+2017-06-22T10:13:54.551Z - info: noshortcut: false
+2017-06-22T10:13:54.551Z - info: forceInstall: false
+2017-06-22T10:13:54.551Z - info: calledByCheckupdate: false
+2017-06-22T10:13:54.551Z - info: rerun: false
+2017-06-22T10:13:59.471Z - info: Read InstallInfo.json
+2017-06-22T10:13:59.472Z - info: Read installDir from InstallInfo.json
+2017-06-22T10:13:59.472Z - info: programPath: C:\Users\PanuddaN\AppData\Local\Eikon Light\EikonLight.exe
+2017-06-22T10:13:59.472Z - info: programName: EikonLight.exe
+2017-06-22T10:14:00.461Z - info: 
+2017-06-22T10:14:00.461Z - info: Kill All Complete
+2017-06-22T10:14:00.476Z - info: Remove Shortcut
+2017-06-22T10:14:00.476Z - info: Remove ARP
+2017-06-22T10:14:00.476Z - info: Installer: Removing registry
+2017-06-22T10:14:00.492Z - info: ARPManager: Removing keys complete.
+2017-06-22T10:14:00.492Z - info: Remove Files
+2017-06-22T10:14:00.492Z - info: isUpdate: false
