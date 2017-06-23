@@ -77,7 +77,7 @@ function runInstallationTest(name, path) {
 }
 
 function sendResult(time) {
-    fs.readFile('./TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
+    fs.readFile('../TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
         if (err) {
             console.log(err);
         }
@@ -120,8 +120,8 @@ function downloadInstaller(path, url, callback) {
     var file = fs.createWriteStream(path);
 
     var req = http.request(url, function(res) {
-        console.log("statusCode: ", res.statusCode);
-        console.log("headers: ", res.headers);
+        //console.log("statusCode: ", res.statusCode);
+        //console.log("headers: ", res.headers);
         if (res.statusCode == '200') {
             res.on('data', function(d) {
                 file.write(d);
