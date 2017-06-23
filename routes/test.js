@@ -13,7 +13,9 @@ var http = require('http')
 router.get('/', function (req, res, next) {
     if (status.isAvailiable()) {
         status.set('Service Unavailable')
-        var path = config.testPath;
+        var dirPath = __dirname
+        dirPath = dirPath.substr(0, dirPath.length - 6)
+        var path = dirPath + config.testPath;
         console.log(path)
         
         var name = req.body.name || req.query.name
@@ -77,7 +79,10 @@ function runInstallationTest(name, path) {
 }
 
 function sendResult(time) {
-    fs.readFile('../TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
+    var dirPath = __dirname
+    dirPath = dirPath.substr(0, dirPath.length - 6)
+    console.log(dirPath)
+    fs.readFile(dirPath + '/TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
         if (err) {
             console.log(err);
         }
@@ -133,14 +138,15 @@ function downloadInstaller(path, url, callback) {
 
             res.on('error', function(e) {
                 console.error(e);
+                file.close()
                 fs.unlink(path)
                 callback(e)
             });
         }
         else {
+            file.close()
             fs.unlink(path)
             callback('error: ' + res.statusCode)
-            return;
         }
     });
     req.end()
