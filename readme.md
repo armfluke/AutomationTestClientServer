@@ -6,13 +6,13 @@
 
 * Clone the source code:
  * ```git clone https://Thanakit.Songsirisuk@git.sami.int.thomsonreuters.com/Thanakit.Songsirisuk/ClientExpress.git```
-* Setup the module:
+* Setup the modules:
  * ```npm install```
-* Go to config.json file to setup server's IP address and check relevant details regarding download location
+* Go to config.json file to setup server's IP address and check relevant details regarding download location and more (i.e. ports)
 
 * Start the testing process by sending your IP address to server
  * ```npm start```
- * wait server to run test
+ * Wait for the server to initialize the testing 
 
 ### Result Log
-* Results will be placed in the TestLogs directory as result.json
+* Results will be placed in the TestLogs directory as result.json with the timestamp as the name of the directory  
