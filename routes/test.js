@@ -13,31 +13,33 @@ var http = require('http')
 router.get('/', function (req, res, next) {
     if (status.isAvailiable()) {
         status.set('Service Unavailable')
-        var path = config.testPath;
+        var dirPath = __dirname
+        dirPath = dirPath.substr(0, dirPath.length - 6)
+        var path = dirPath + config.testPath;
         console.log(path)
         
-        var name = req.body.name
+        var name = req.body.name || req.query.name
         if(!name) {
             res.send({status: "Error", error: "Please attach product name with HTTP request"});
             status.set("Service Available");
             return;
         }
 
-        var downloadUrl = req.body.url 
+        var downloadUrl = req.body.url || req.query.url
         if (!downloadUrl) {
             res.send({ status: "Error", error: "Please attach download url with HTTP request" })
             status.set("Service Available")
             return;
         }
 
-        var test = req.body.test
+        var test = req.body.test || req.query.test
         if (!test) {
             res.send({ status: "No test found" })
             status.set("Service Available")
             return;
         }
 
-        downloadInstaller(process.env.USERPROFILE + config.installerPath, downloadUrl, function (downloadResponse, err) {
+        downloadInstaller(process.env.USERPROFILE + config.installerPath, downloadUrl, function (err) {
             if (err) {
                 status.set('Service Available')
                 res.send({ status: "Error", error: "Download Installer Failed (url: " + downloadUrl + ")" })
@@ -45,6 +47,7 @@ router.get('/', function (req, res, next) {
             else {
                 if (test === 'InstallationTest') {
                     res.send({ status: "OK" });
+
                     runInstallationTest(name, path)
                 }
                 else {
@@ -76,7 +79,10 @@ function runInstallationTest(name, path) {
 }
 
 function sendResult(time) {
-    fs.readFile('./TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
+    var dirPath = __dirname
+    dirPath = dirPath.substr(0, dirPath.length - 6)
+    console.log(dirPath)
+    fs.readFile(dirPath + '/TestLogs/' + time + '/result.json', 'utf8', function (err, data) {
         if (err) {
             console.log(err);
         }
@@ -101,19 +107,50 @@ function downloadInstaller(path, url, callback) {
         fs.unlinkSync(path)
     }
     console.log('start downloading to path ' + path + ' from ' + config.installerUrl)
-    var file = fs.createWriteStream(path)
-    var request = http.get(url, function (response) {
-        response.pipe(file)
-        file.on('finish', function () {
-            file.close(callback)
-            console.log('download done')
-        })
+    // var file = fs.createWriteStream(path)
+    // var request = http.get(url, function (response) {
+    //     response.pipe(file)
+    //     file.on('finish', function () {
+    //         file.close(callback)
+    //         console.log('download done')
+    //     })
 
-    }).on('error', function (err) {
-        fs.unlink(path)
-        console.log(err)
-        if (callback) callback(err)
-    })
+    // })
+    // var options = {
+    //     hostname  : url,
+    //     path      : path,
+    //     method    : 'GET'
+    // };
+
+    var file = fs.createWriteStream(path);
+
+    var req = http.request(url, function(res) {
+        //console.log("statusCode: ", res.statusCode);
+        //console.log("headers: ", res.headers);
+        if (res.statusCode == '200') {
+            res.on('data', function(d) {
+                file.write(d);
+            });
+            res.on('end', function() {
+                file.close(callback)
+                console.log('donwload done')
+            })
+
+            res.on('error', function(e) {
+                console.error(e);
+                file.close()
+                fs.unlink(path)
+                callback(e)
+            });
+        }
+        else {
+            file.close()
+            fs.unlink(path)
+            callback('error: ' + res.statusCode)
+        }
+    });
+    req.end()
+        
 }
 
 module.exports = router;
