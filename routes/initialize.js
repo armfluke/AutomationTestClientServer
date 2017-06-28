@@ -10,7 +10,13 @@ var sendIP = function() {
     console.log(serverRoute)
     var myIP = ip.address() + ':' + config.port
     console.log('my ip is ' + myIP)
-    request.post(config.serverIP + 'init', {json: {ip: myIP}}, function(err, res, body) {
+    var info = {
+        hostName: os.hostname(),
+        ip: ip.address(),
+        os: osName(os.platform(), os.release()),
+        osArch: os.arch() 
+    }
+    request.post(config.serverIP + 'init', {json: info}, function(err, res, body) {
         if (err) {
             console.log(err)
         }
