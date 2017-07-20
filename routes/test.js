@@ -11,7 +11,7 @@ var http = require('http')
 /* GET home page. */
 
 router.get('/', function (req, res, next) {
-    if (status.isAvailiable()) {
+    if (status.get().status == 'Service Available') {
         status.set('Service Unavailable')
         var dirPath = __dirname
         dirPath = dirPath.substr(0, dirPath.length - 6)

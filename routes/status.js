@@ -1,5 +1,4 @@
-const OK = 'Service Available'
-const BUSY = 'Service Unavailable'
+ 
 
 var status = "Service Available"
 
