@@ -9,14 +9,9 @@ var sendIP = function() {
     var serverRoute = config.serverIP + 'init'
     console.log(serverRoute)
     var myIP = ip.address() + ':' + config.port
+    var myID = '123456'; //uniqueID
     console.log('my ip is ' + myIP)
-    var info = {
-        hostName: os.hostname(),
-        ip: ip.address(),
-        os: osName(os.platform(), os.release()),
-        osArch: os.arch() 
-    }
-    request.post(config.serverIP + 'init', {json: info}, function(err, res, body) {
+    request.post(config.serverIP + 'init', {json: {ip: myIP, id:myID}}, function(err, res, body) {
         if (err) {
             console.log(err)
         }
