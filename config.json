@@ -3,6 +3,5 @@
     "submitRoute": "submitres/",
     "port": "3000",
     "testPath": "automationtest",
-    "installerPath": "\\Desktop\\EikonLight-installer-win32-x64_1.0.111.exe",
-    "installerUrl": "http://bams-apac-sami-api.int.thomsonreuters.com/artifactory/default.generic.global/eikon-setup/packages/EikonOnElectron/Installer/EikonLight-installer-win32-x64_1.0.111.exe"
+    "installerPath": "\\Desktop\\EikonLight-installer-win32-x64_1.0.111.exe"
 }
