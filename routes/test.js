@@ -201,9 +201,9 @@ function getUrlFromJenkins(callback) {
         'http://ucbuild.int.thomsonreuters.com/job/EOE-build-(windows)/', {
             useFirstRowForHeadings: true
         },
-        function (tablesAsJson) {
+        function (tablesAsJson) {   
             if (tablesAsJson) {
-                let url = 'http://ucbuild.int.thomsonreuters.com/job/EOE-build-(windows)/lastSuccessfulBuild/artifact/dist/' + tablesAsJson[4][1][1]
+                let url = 'http://bams-apac-sami-api.int.thomsonreuters.com/artifactory/default.generic.global/eikon-setup/packages/EikonOnElectron/Installer/' + tablesAsJson[4][1][1]
                 callback(url);
             } else {
                 callback('error');
